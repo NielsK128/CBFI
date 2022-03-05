@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - bullet
+  - enemy
+  - ground
+  - screenshake
+  - spawnpoint
+  - weapon
+  - healing
+  - mechanics
+  - collectable
+  - selectedskin
+  - playerspawnpoint
+  - healthtext
+  - background
+  - crate
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - ground
+  - Water
+  - UI
+  - enemy
+  - crate
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BG
+    uniqueID: 810948895
+    locked: 0
+  - name: collectables
+    uniqueID: 1609331789
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Default1.5
+    uniqueID: 3099894263
+    locked: 0
+  - name: Default2
+    uniqueID: 152670725
+    locked: 0
+  - name: Weapons
+    uniqueID: 2001075129
+    locked: 0
