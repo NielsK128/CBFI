@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("spawnpoint");
+        spawnEnemy();
     }
 
     // Update is called once per frame
@@ -19,8 +20,12 @@ public class EnemySpawner : MonoBehaviour
     {
         if(mechanics.GetComponent<Score>().getScore() >= 10+i) {
             i += 100;
+            spawnEnemy();
+        }
+    }
+
+    public void spawnEnemy() {
             int j = (int)Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy, spawnPoints[j].transform.position, spawnPoints[j].transform.rotation);
-        } 
+            Instantiate(enemy, spawnPoints[j].transform.position, spawnPoints[j].transform.rotation);     
     }
 }

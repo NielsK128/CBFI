@@ -78,12 +78,20 @@ public class PlayerController : MonoBehaviour
         {
             squashScretchAnimator.SetTrigger("Landing");
         }
+        if(col.gameObject.name.Equals("MovingPlatform")) {
+            this.transform.parent = col.transform;
+        }
+    }
+
+    public void OnCollisionExit2D(Collision2D col) {
+        if(col.gameObject.name.Equals("MovingPlatform")) {
+            this.transform.parent = null;
+        }
     }
 
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 

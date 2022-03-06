@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
     public GameObject mechanics;
     public GameObject deathEffect;
     public ParticleSystem damageParticles;
-
     public GameObject clay;
 
     //public GameObject explosion;
@@ -28,6 +27,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+            health -= PlayerPrefs.GetInt("enemyPredamage");
         if (health <= 0)
         {
             mechanics.GetComponent<Score>().increaseScore(scoreOnDeath);

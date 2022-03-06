@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8338751942562428828
 Transform:
   m_ObjectHideFlags: 0
@@ -46,12 +46,12 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.6
+  m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 1f1956304d74ec5f
+  m_ApplyToSortingLayers: 1f1956304d74ec5f00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -178,8 +178,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 988901557
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a30aac1cebfdcfe4daaac93acbe750d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -343,7 +343,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 152670725
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: efd46271310eccd4bac6045b198b4cea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -426,7 +426,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2001075129
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bd3ff760546bf0549841e5e207d0b713, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -531,12 +531,12 @@ MonoBehaviour:
   scoreOnDeath: 100
   health: 100
   rnd: 0
-  mechanics: {fileID: 2167458969408331550, guid: 6b3d0da30067f0a4aa37c45f8f73d03e,
-    type: 3}
+  mechanics: {fileID: 0}
   deathEffect: {fileID: 2167458969408331550, guid: 6b3d0da30067f0a4aa37c45f8f73d03e,
     type: 3}
   damageParticles: {fileID: 2167458969408331521, guid: 6b3d0da30067f0a4aa37c45f8f73d03e,
     type: 3}
+  light2d: {fileID: 8338751942562428771}
   clay: {fileID: 4378473359036942647, guid: 0596efb64a10e9c4d87aee9ebad37cf8, type: 3}
 --- !u!114 &8338751944222143832
 MonoBehaviour:

@@ -8,7 +8,6 @@ public class PlayerHealth : MonoBehaviour
 {
     private int maxHealth;
     public int currentHealth;
-
     public GameObject mechanics;
 
     public TMP_Text health;
@@ -34,6 +33,11 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             gameOver();
+        }
+        if(currentHealth <= 30) {
+            mechanics.GetComponent<EnableLowHPScreen>().enableScreen();
+        } else if (currentHealth > 30) {
+            mechanics.GetComponent<EnableLowHPScreen>().disableScreen();
         }
     }
     public void increaseHealth(int increase)

@@ -12,6 +12,7 @@ public class Spike : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SpikeDamage = GameObject.FindWithTag("damageparticles").GetComponent<ParticleSystem>();
         if(PlayerPrefs.GetInt("spikedamage") <= 0)
         {
             PlayerPrefs.SetInt("spikedamage", 20);

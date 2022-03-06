@@ -52,7 +52,7 @@ public class Projectile : MonoBehaviour
         if(collision.gameObject.tag == "enemy")
             {
                 collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-            } else if (collision.gameObject.layer == 7) {
+            } else if (collision.gameObject.tag == "crate") {
                 collision.gameObject.GetComponent<DestroyCrate>().TakeDamage(damage);
             }
     }

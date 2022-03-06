@@ -12,7 +12,7 @@ public class EnemySword : MonoBehaviour
     public bool canAttack = false;
     void Start()
     {
-        
+        damage = damage + (GameObject.FindWithTag("mechanics").GetComponent<Score>().scoreValue / 100);
     }
 
     void Update()

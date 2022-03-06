@@ -5,9 +5,12 @@ using UnityEngine;
 public class Clay : MonoBehaviour
 {
     public GameObject parentObject;
+
+    public ParticleSystem clayParticles;
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+                clayParticles = GameObject.Find("ClayParticles").GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -21,6 +24,7 @@ public class Clay : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             GlobalClay.addClay();
+            clayParticles.Play();
             Destroy(parentObject);
         }
     }

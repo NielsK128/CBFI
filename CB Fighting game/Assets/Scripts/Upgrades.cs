@@ -19,8 +19,8 @@ public class Upgrades : MonoBehaviour
     public int healthBoosterCost;
     public TMP_Text spikeWeaknessText;
     public int spikeWeaknessCost;
-    public TMP_Text enemyGlowText;
-    public int enemyGlowCost;
+    public TMP_Text enemyPredamageText;
+    public int enemyPredamageCost;
     public TMP_Text bulletSpeedText;
     public int bulletSpeedCost;
     public TMP_Text pistolLifetimeText;
@@ -37,7 +37,7 @@ public class Upgrades : MonoBehaviour
         multiJumpText.text = "Current multijumps: " + PlayerPrefs.GetInt("multijump").ToString();
         healthBoosterText.text = "Current health booster strength: 20 " + PlayerPrefs.GetInt("healthbooster").ToString();
         spikeWeaknessText.text = "Current damage dealt by spikes: " + PlayerPrefs.GetInt("spikedamage").ToString();
-        if(PlayerPrefs.GetInt("enemyGlow") == 1) { enemyGlowText.text = "Enemy glow: enabled"; } else { enemyGlowText.text = "Enemy glow: disabled"; }
+        enemyPredamageText.text = "Current enemy predamage: " + PlayerPrefs.GetInt("enemypredamage").ToString();
         bulletSpeedText.text = "Current bullet speed: " + PlayerPrefs.GetFloat("bulletspeed").ToString();
         pistolLifetimeText.text = "Current pistol bullet lifetime: " + PlayerPrefs.GetFloat("pistollifetime").ToString();
     }
@@ -107,10 +107,10 @@ public class Upgrades : MonoBehaviour
         NotEnoughClay();
         }
     }
-    public void enemyGlow() {
-        if(GlobalClay.getClay() >= enemyGlowCost) {
-        GlobalClay.removeClay(enemyGlowCost);
-        PlayerPrefs.SetFloat("enemyGlow", 1); }
+    public void enemyPredamage(int i) {
+        if(GlobalClay.getClay() >= enemyPredamageCost) {
+        GlobalClay.removeClay(enemyPredamageCost);
+        PlayerPrefs.SetInt("enemyPredamage", PlayerPrefs.GetInt("enemyPredamage") + i); }
         else {
         NotEnoughClay();
         }
@@ -147,7 +147,7 @@ public class Upgrades : MonoBehaviour
         PlayerPrefs.DeleteKey("spikedamage");
         PlayerPrefs.DeleteKey("bulletspeed");
         PlayerPrefs.DeleteKey("pistollifetime");
-        PlayerPrefs.DeleteKey("enemyGlow");
+        PlayerPrefs.DeleteKey("enemyPredamage");
         PlayerPrefs.DeleteKey("clay");
     }
 
